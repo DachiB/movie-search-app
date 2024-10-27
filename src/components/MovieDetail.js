@@ -6,7 +6,7 @@ const MovieDetail = () => {
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
-    fetch(`http://www.omdbapi.com/?apikey=19d39ea6&i=${id}&plot=full`)
+    fetch(`https://www.omdbapi.com/?apikey=19d39ea6&i=${id}&plot=full`)
       .then((res) => res.json())
       .then((data) => setMovie(data))
       .catch((error) => console.error("Error fetching data:", error));

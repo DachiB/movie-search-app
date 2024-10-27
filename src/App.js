@@ -12,7 +12,7 @@ const App = () => {
   const [favorites, setFavorites] = useState([]);
 
   const handleSearch = (query) => {
-    fetch(`http://www.omdbapi.com/?apikey=19d39ea6&s=${query}`)
+    fetch(`https://www.omdbapi.com/?apikey=19d39ea6&s=${query}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.Search) {
