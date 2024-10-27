@@ -19,6 +19,7 @@ const App = () => {
           setMovies(data.Search);
         } else {
           setMovies([]);
+          alert(data.Error);
         }
       })
       .catch((error) => console.error("Error fetching data:", error));

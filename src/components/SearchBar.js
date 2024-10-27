@@ -8,6 +8,8 @@ const SearchBar = ({ onSearch }) => {
     if (query.trim()) {
       onSearch(query);
       setQuery("");
+    } else {
+      alert("Please enter a search term.");
     }
   };
 
