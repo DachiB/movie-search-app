@@ -1,9 +1,28 @@
 import React from "react";
 import MovieCard from "./MovieCard";
+import { motion } from "framer-motion";
 
 const MovieList = ({ movies, addToFavorites }) => {
   return (
-    <div className="movie-list">
+    <motion.div
+      className="movie-list"
+      initial="hidden"
+      animate="visible"
+      variants={{
+        hidden: {
+          opacity: 0,
+          scale: 0.8,
+        },
+        visible: {
+          opacity: 1,
+          scale: 1,
+          transition: {
+            delayChildren: 0.3,
+            staggerChildren: 0.2,
+          },
+        },
+      }}
+    >
       {movies.length > 0 ? (
         movies.map((movie) => (
           <MovieCard
@@ -15,7 +34,7 @@ const MovieList = ({ movies, addToFavorites }) => {
       ) : (
         <p>No movies found.</p>
       )}
-    </div>
+    </motion.div>
   );
 };
 

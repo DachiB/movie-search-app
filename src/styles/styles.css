@@ -10,6 +10,11 @@ body {
   padding: 20px;
 }
 
+.details {
+  text-decoration: none;
+  color: gray;
+}
+
 h1 {
   text-align: center;
   color: #333;
